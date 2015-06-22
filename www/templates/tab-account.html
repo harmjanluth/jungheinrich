@@ -1,16 +1,43 @@
 <ion-view view-title="Account">
   <ion-content class="padding">
-    <ion-list>
-      <ion-toggle ng-model="settings.push" class="toggle-assertive">
-          Notificaties
-      </ion-toggle>
-      <ion-toggle ng-model="settings.extend" class="toggle-assertive">
-          Automatisch verlengen
-      </ion-toggle>
-      <ion-toggle class="toggle-assertive">
-          Offline beschikbaar
-      </ion-toggle>
-    </ion-list>
+    <ul class="list">
+
+<li class="item item-toggle">
+  Notificaties
+   <label class="toggle toggle-assertive">
+     <input type="checkbox" ng-model="settings.push">
+     <div class="track">
+       <div class="handle"></div>
+     </div>
+   </label>
+</li>
+
+
+<li class="item item-toggle">
+  Automatisch verlengen
+   <label class="toggle toggle-assertive">
+     <input type="checkbox" ng-model="settings.extend">
+     <div class="track">
+       <div class="handle"></div>
+     </div>
+   </label>
+</li>
+
+
+<li class="item item-toggle">
+  Offline beschikbaar
+   <label class="toggle toggle-assertive">
+     <input type="checkbox">
+     <div class="track">
+       <div class="handle"></div>
+     </div>
+   </label>
+</li>
+
+
+</ul>
+
+
     <button class="button button-block button-assertive">
   Uitloggen
 </button>

@@ -69,6 +69,8 @@ $dark:                            #444 !default;
       color: #777; }
     .theme-jungheinrich .dashboard .rental-summary .item {
       background-color: transparent; }
+.theme-jungheinrich .manual-detail {
+  background-color: #f6f6f6; }
 
 /*!
   Ionicons, v2.0.1
