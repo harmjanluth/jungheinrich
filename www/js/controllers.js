@@ -1,9 +1,23 @@
 angular
-  .module('starter.controllers', [])
+  .module('jungheinrich.controllers', [])
   .controller('DashCtrl', function($scope) { })
 
 .controller('ManualDetailCtrl', function($scope, $ionicConfig) {
   $ionicConfig.backButton.text('Terug');
+
+  videojs.options.flash.swf = 'http://static.playbackurl.com/player/video-js.swf';
+  videojs.options.techOrder = [ 'hls', 'html5'];
+
+  var video = videojs('video-js', {}, function()
+    {
+      this.currentTime(1000);
+    });
+
+  $scope.goto = function(seconds) {
+    video.currentTime(seconds);
+    video.play();
+  }
+
 })
 
 .controller('AccountCtrl', function($scope) {
@@ -40,7 +54,12 @@ angular
     lastText: 'Draagvermogen 1000 tot 2500 kg',
     face: 'img/secties/reachtruck.jpg'
   }];
-  $ionicConfig.backButton.text('Terug');
+  $ionicConfig.backButton.text('');
+
+  $scope.onTabSelected = function() {
+    $state.go('tabs.manuals');
+  }
+
 })
 
 .controller('CategoriesCtrl', function($scope, $ionicConfig) {

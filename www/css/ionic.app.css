@@ -71,6 +71,9 @@ $dark:                            #444 !default;
       background-color: transparent; }
 .theme-jungheinrich .manual-detail {
   background-color: #f6f6f6; }
+  .theme-jungheinrich .manual-detail video {
+    width: 100%;
+    display: block; }
 
 /*!
   Ionicons, v2.0.1

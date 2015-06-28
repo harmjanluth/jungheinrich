@@ -1,57 +1,100 @@
 <ion-view view-title="Elektrische heftruck 3 serie">
   <ion-content class="manual-detail">
-    <iframe style="display:block;" width="100%" height="315" src="https://www.youtube.com/embed/QuXtpHf3tDk" frameborder="0" allowfullscreen></iframe>
+
+  <video id="video-js" class="video-js vjs-shadow-skin" controls preload="auto" width="100%" height="200px" style="position:relative;" data-setup='{"ga": {"eventsToTrack": ["error","loaded","start","end","play","pause","resize","fullscreen"]}}'>
+    <source src=http://jhpoc.playbackurl.com/jhfinal5/jhfinal5.m3u8 type='application/x-mpegURL' />
+    <source src=http://jhpoc.playbackurl.com/jhfinal5/jhfinal5.mp4 type='video/mp4' />
+     <p class=vjs-no-js>Your browser does not support Javascript</p>
+  </video>
 
     <div class="list">
       <div class="item item-divider">
-        Ingebruikname
+        Persoonsveiligheid
       </div>
-      <div class="item item-icon-left">
-        <i class="icon ion-ios-play"></i> Inspectie voertuig
+      <div class="item item-icon-left" ng-click="goto(25)">
+        <i class="icon ion-ios-play"></i> Kleding
         <span class="item-note">
-          0:04
+          0:25
         </span>
       </div>
-      <div class="item item-icon-left">
-        <i class="icon ion-ios-play"></i> Uitleg besturing
+      <div class="item item-icon-left" ng-click="goto(39)">
+        <i class="icon ion-ios-play"></i> Gordel en omgeving
         <span class="item-note">
-          1:12
+          0:39
         </span>
       </div>
       <div class="item item-divider">
-        Werken met
+        Controle vooraf
       </div>
-      <div class="item item-icon-left">
-        <i class="icon ion-ios-play"></i> Rijden met de heftruck
+      <div class="item item-icon-left" ng-click="goto(50)">
+        <i class="icon ion-ios-play"></i> Wielen, ketting en lasdiagram
         <span class="item-note">
-          2:24
+          0:50
         </span>
       </div>
-      <div class="item item-icon-left">
-        <i class="icon ion-ios-play"></i> Liften en draaien
+      <div class="item item-icon-left" ng-click="goto(78)">
+        <i class="icon ion-ios-play"></i> Vorken en mast
         <span class="item-note">
-          3:10
+          1:17
         </span>
       </div>
-      <div class="item item-icon-left">
-        <i class="icon ion-ios-play"></i> Verplaatsen van pallets
+      <div class="item item-icon-left" ng-click="goto(91)">
+        <i class="icon ion-ios-play"></i> Verlichting, noodknop en remmen
         <span class="item-note">
-          3:43
+          1:31
         </span>
       </div>
+      <div class="item item-divider">
+        Regels in acht
+      </div>
+      <div class="item item-icon-left" ng-click="goto(109)">
+        <i class="icon ion-ios-play"></i> Aandacht, overhangen en liften
+        <span class="item-note">
+          1:49
+        </span>
+      </div>
+      <div class="item item-icon-left" ng-click="goto(133)">
+        <i class="icon ion-ios-play"></i> Stabiliteit, zicht en last
+        <span class="item-note">
+          2:13
+        </span>
+      </div>
+      <div class="item item-icon-left" ng-click="goto(146)">
+        <i class="icon ion-ios-play"></i> Handleidingen
+        <span class="item-note">
+          2:26
+        </span>
+      </div>
+      <div class="item item-divider">
+        Opleidingen
+      </div>
+      <div class="item item-icon-left" ng-click="goto(168)">
+        <i class="icon ion-ios-play"></i> Informatie over opleidingen
+        <span class="item-note">
+          2:48
+        </span>
+      </div>
+
 
 </div>
 
 <div class="list card">
   <div class="item">Meer</div>
   <ul class="list">
-      <li class="item"><a href="#/tab/manuals/categories/detail"><i class="ion-ios-book-outline"></i> &nbsp; Handleiding downloaden
+      <li class="item"><a href="#/tab/manuals/categories/detail"><i class="ion-ios-book-outline"></i> &nbsp; Handleiding
         <span class="item-note">
           (PDF 32,8kb)
         </span>
 
         </a></li>
-      <li class="item"><a href="#"><i class="ion-ios-printer-outline"></i> &nbsp;Printen</a></li>
+        <li class="item"><a href="#/tab/manuals/categories/detail"><i class="ion-ios-book-outline"></i> &nbsp; Opleidingen
+          <span class="item-note">
+            (PDF 190,2kb)
+          </span>
+
+          </a></li>
+
+      <li class="item"><a href="#"><i class="ion-ios-printer-outline"></i> &nbsp; Samenvatting</a></li>
   </ul>
 </div>
 
