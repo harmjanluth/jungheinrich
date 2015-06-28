@@ -22,6 +22,10 @@ angular
     video.play();
   }
 
+  $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+   video.pause();
+});
+
 })
 
 .controller('AccountCtrl', function($scope) {
