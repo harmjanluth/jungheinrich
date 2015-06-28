@@ -6,8 +6,10 @@
     <title></title>
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://static.playbackurl.com/player/style/thevideoexpress-player.min.css">
-    <script src="http://static.playbackurl.com/player/js/thevideoexpress-player.min.js"></script>
+    <link href="css/videojs.css" rel="stylesheet">
+
+    <script src="//vjs.zencdn.net/4.12/video.js"></script>
+    <script src="http://videojs.github.io/videojs-contrib-hls/node_modules/videojs-contrib-media-sources/src/videojs-media-sources.js"></script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -16,6 +18,7 @@
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/videojs.hls.min.js"></script>
 
   </head>
   <body ng-app="jungheinrich" class="theme-jungheinrich">

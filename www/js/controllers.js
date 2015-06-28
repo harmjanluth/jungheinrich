@@ -3,14 +3,15 @@ angular
   .controller('DashCtrl', function($scope) { })
 
 .controller('ManualDetailCtrl', function($scope, $ionicConfig) {
-  $ionicConfig.backButton.text('Terug');
+
+  $ionicConfig.backButton.text('');
 
   videojs.options.flash.swf = 'http://static.playbackurl.com/player/video-js.swf';
   videojs.options.techOrder = [ 'hls', 'html5'];
 
   var video = videojs('video-js', {}, function()
     {
-      this.currentTime(1000);
+      this.currentTime(2);
     });
 
   $scope.goto = function(seconds) {
@@ -25,6 +26,12 @@ angular
     push: true,
     extend: true
   };
+})
+
+.controller('TabsCtrl', function($scope, $state) {
+  $scope.onTabSelected = function() {
+    //$state.go('tabs.manuals');
+  }
 })
 
 .controller('ManualsCtrl', function($scope, $ionicConfig) {
@@ -54,11 +61,8 @@ angular
     lastText: 'Draagvermogen 1000 tot 2500 kg',
     face: 'img/secties/reachtruck.jpg'
   }];
-  $ionicConfig.backButton.text('');
 
-  $scope.onTabSelected = function() {
-    $state.go('tabs.manuals');
-  }
+  $ionicConfig.backButton.text('');
 
 })
 
