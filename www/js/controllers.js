@@ -1,5 +1,8 @@
 angular
   .module('jungheinrich.controllers', [])
+  .config(function($ionicConfigProvider) {
+
+  })
   .controller('DashCtrl', function($scope) { })
 
 .controller('ManualDetailCtrl', function($scope, $ionicConfig) {
@@ -7,7 +10,7 @@ angular
   $ionicConfig.backButton.text('');
 
   videojs.options.flash.swf = 'http://static.playbackurl.com/player/video-js.swf';
-  videojs.options.techOrder = [ 'hls', 'html5'];
+  videojs.options.techOrder = [ 'hls', 'html5' ];
 
   var video = videojs('video-js', {}, function()
     {
@@ -28,10 +31,11 @@ angular
   };
 })
 
-.controller('TabsCtrl', function($scope, $state) {
-  $scope.onTabSelected = function() {
-    //$state.go('tabs.manuals');
-  }
+.controller('TabsCtrl', function($scope, $ionicHistory) {
+
+  $scope.clearHistory = function() {
+      $ionicHistory.clearHistory();
+   }
 })
 
 .controller('ManualsCtrl', function($scope, $ionicConfig) {
